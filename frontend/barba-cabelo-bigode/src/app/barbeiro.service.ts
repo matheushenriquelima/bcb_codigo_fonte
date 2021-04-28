@@ -13,4 +13,8 @@ export class BarbeiroService {
   cadastrar(barbeiro: Barbeiro):Observable<Barbeiro> {
     return this.httpCliente.post<Barbeiro>("http//localhost:3001/barbeiro", barbeiro);
   }
+
+  editar (cliente: Cliente): Observable<Cliente> {
+    return this.httpClient.post<Cliente>("http//localhost:3001/clientes", cliente);
+  }
 }

@@ -13,4 +13,8 @@ export class ClienteService {
   cadastrar (cliente: Cliente): Observable<Cliente> {
     return this.httpClient.post<Cliente>("http//localhost:3001/clientes", cliente);
   }
+
+  editar (cliente: Cliente): Observable<Cliente> {
+    return this.httpClient.put<Cliente>("http//localhost:3001/clientes", cliente);
+  }
 }

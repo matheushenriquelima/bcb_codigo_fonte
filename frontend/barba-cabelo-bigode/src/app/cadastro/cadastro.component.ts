@@ -1,3 +1,4 @@
+import { observable, Observable } from 'rxjs';
 import { ClienteService } from './../cliente.service';
 import { BarbeiroService } from './../barbeiro.service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -27,31 +28,32 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
 
-  cadastrar(){
-    this.presentToast()
+  cadastrar() {
     this.isBarbeiro ? this.cadastroBarbeiro() : this.cadastrarCliente();
   }
 
   cadastroBarbeiro() {
     this.barbeiro.fromUser(this.user);
-    this.barbeiroService.cadastrar(this.barbeiro).subscribe(() => this.presentToast());
+    this.barbeiroService.cadastrar(this.barbeiro).subscribe(() => this.toastMessageSuccess());
   }
 
   cadastrarCliente() {
     this.cliente.fromUser(this.user);
-    this.clienteService.cadastrar(this.cliente).subscribe();
+    this.clienteService.cadastrar(this.cliente).subscribe(() => this.toastMessageSuccess());
   }
 
   setIsBarbeiro() {
     this.isBarbeiro = !this.isBarbeiro;
   }
 
-  async presentToast() {
+  async toastMessageSuccess() {
     const toast = await this.toastController.create({
-      message: 'Your settings have been saved.',
-      duration: 2000
+      header: 'Sucesso',
+      message: 'Cadastrado com Sucesso',
+      position: 'top',
+      color: 'success'
     });
-    toast.present();
+    await toast.present();
   }
 
 }

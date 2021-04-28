@@ -22,3 +22,6 @@ img {
 ion-header{
   margin-top: 50px;
 }
+ion-item {
+  width: 360px;
+}

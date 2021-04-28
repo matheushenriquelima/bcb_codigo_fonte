@@ -10,22 +10,25 @@
   </div>
 </ion-header>
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Nome: </ion-label>
-    <ion-input [(ngModel)]="user.nome"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">E-mail: </ion-label>
-    <ion-input [(ngModel)]="user.email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Senha: </ion-label>
-    <ion-input [(ngModel)]="user.senha"></ion-input>
-  </ion-item>
-  <ion-item *ngIf="isBarbeiro">
-    <ion-label position="floating">Endereco: </ion-label>
-    <ion-input [(ngModel)]="barbeiro.endereco"></ion-input>
-  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-input [(ngModel)]="user.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail: </ion-label>
+      <ion-input [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha: </ion-label>
+      <ion-input [(ngModel)]="user.senha"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="isBarbeiro">
+      <ion-label position="floating">Endereco: </ion-label>
+      <ion-input [(ngModel)]="barbeiro.endereco"></ion-input>
+    </ion-item>
+  </ion-list>
+
   
   <div class="center-content">
     <ion-button id="botao-cadastrar" size="large" expand="block" (click)="cadastrar()">Cadastrar</ion-button>
