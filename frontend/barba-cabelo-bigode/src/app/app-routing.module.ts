@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.component').then( m => m.CadastroComponent)
   },
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    component: CadastroComponent
   },
 ];
 
