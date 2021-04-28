@@ -1,6 +1,6 @@
 const mongoose =  require('mongoose');
 
-const ClienteSchema = new mongoose.Schema(
+const BarbeiroSchema = new mongoose.Schema(
     {
         nome: {
             type: String,
@@ -16,6 +16,10 @@ const ClienteSchema = new mongoose.Schema(
             type: String,
             required: true,
             select: false
+        },
+        endereco: {
+            type: String,
+            required: true
         }
     },
     {
@@ -23,10 +27,10 @@ const ClienteSchema = new mongoose.Schema(
     }
 )
 
-ClienteSchema.pre('save', async function(next) {
+BarbeiroSchema.pre('save', async function(next) {
     const hash = await bcrypt.hash(this.senha, 10);
     this.senha = hash;
     next();
 });
 
-module.exports = mongoose.model("Cliente", ClienteSchema);
+module.exports = mongoose.model("Barbeiro", BarbeiroSchema);

@@ -6,7 +6,7 @@ class ClienteService {
             const cliente = await Cliente.create(req.body);
             return res.json(cliente);
         } catch (error) {
-            return res.status.send({error: 'Não foi possivel cadastrar o Cliente'});
+            return res.status.send({error: 'Não foi possivel cadastrar o cliente'});
         } 
     }
 
