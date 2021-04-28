@@ -18,7 +18,9 @@
     <ion-label position="floating">Senha: </ion-label>
     <ion-input></ion-input>
   </ion-item>  
-  <ion-button id="botao-cadastrar" size="large" expand="block">Login</ion-button>
+  <div class="center-content">
+    <ion-button id="botao-cadastrar" size="large" expand="block">Login</ion-button>
+  </div>
   <div class="center-content">
     <ion-button id="botao-logar" size="default" fill="outline" [routerLink]="['/cadastro']">Cadastrar</ion-button>
   </div>
@@ -26,9 +28,15 @@
 
 <ion-footer>
   <div class="ion-text-center" (click)="setIsBarbeiro()" color="primary">
-    <h6>
+    <h6 *ngIf="!isBarbeiro" >
       Voce é um 
       <span style="color: #4718AD;">Barbeiro? Clique aqui</span>
+    </h6>
+    <h6 *ngIf="isBarbeiro" >
+      <span style="color: #4718AD;">
+        <ion-icon name="chevron-back-circle"></ion-icon>
+        Voltar para área de clientes
+      </span>
     </h6>
   </div>
 </ion-footer>

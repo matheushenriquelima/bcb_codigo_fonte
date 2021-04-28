@@ -3,9 +3,12 @@
     color: white;
     --border-bottom-left-radius: 0;
     margin-top: 32px;
+    width: 340px;
   }
   #botao-logar {
     width: 260px;
+    --color: #200A4D;
+    --border-color: #200A4D;
   }
   .center-content{
     display: flex;
@@ -18,4 +21,4 @@
   }
   ion-header{
     margin-top: 50px;
-  }
+}

@@ -12,32 +12,42 @@
 <ion-content>
   <ion-item>
     <ion-label position="floating">Nome: </ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="user.nome"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">E-mail: </ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="user.email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Senha: </ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="user.senha"></ion-input>
   </ion-item>
   <ion-item *ngIf="isBarbeiro">
     <ion-label position="floating">Endereco: </ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="barbeiro.endereco"></ion-input>
   </ion-item>
   
-  <ion-button id="botao-cadastrar" size="large" expand="block">Cadastrar</ion-button>
+  <div class="center-content">
+    <ion-button id="botao-cadastrar" size="large" expand="block" (click)="cadastrar()">Cadastrar</ion-button>
+  </div>
   <div class="center-content">
     <ion-button id="botao-logar" size="default" fill="outline" [routerLink]="['/']">Logar</ion-button>
   </div>
 </ion-content>
+
 <ion-footer>
   <div class="ion-text-center" (click)="setIsBarbeiro()" color="primary">
-    <h6>
+    <h6 *ngIf="!isBarbeiro" >
       Voce é um 
       <span style="color: #4718AD;">Barbeiro? Clique aqui</span>
     </h6>
+    <h6 *ngIf="isBarbeiro" >
+      <span style="color: #4718AD;">
+        <ion-icon name="chevron-back-circle"></ion-icon>
+        Voltar para área de clientes
+      </span>
+    </h6>
   </div>
 </ion-footer>
+
 
