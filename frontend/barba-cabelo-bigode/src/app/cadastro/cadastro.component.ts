@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Barbeiro from '../models/Barbeiro.model';
 import Cliente from '../models/cliente.model';
 
 @Component({
-  selector: 'app-tela-inicio',
-  templateUrl: './tela-inicio.component.html',
-  styleUrls: ['./tela-inicio.component.css']
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css']
 })
-export class TelaInicioComponent implements OnInit {
+export class CadastroComponent implements OnInit {
 
+  @Input()
   isBarbeiro = false;
 
   cliente: Cliente = new Cliente();

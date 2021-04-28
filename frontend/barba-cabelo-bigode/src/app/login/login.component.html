@@ -1,0 +1,36 @@
+<ion-header>
+  <div class="center-content">
+    <img src="../../assets/logo.png" alt="">
+  </div>
+  <div class="ion-text-center" *ngIf="isBarbeiro">
+    <h4>Área do Barbeiro</h4>
+  </div>
+  <div class="ion-text-center">
+    <h2>Login</h2>
+  </div>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">E-mail: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Senha: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>  
+  <ion-button id="botao-cadastrar" size="large" expand="block">Login</ion-button>
+  <div class="center-content">
+    <ion-button id="botao-logar" size="default" fill="outline" [routerLink]="['/cadastro']">Cadastrar</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="ion-text-center" (click)="setIsBarbeiro()" color="primary">
+    <h6>
+      Voce é um 
+      <span style="color: #4718AD;">Barbeiro? Clique aqui</span>
+    </h6>
+  </div>
+</ion-footer>
+
+
