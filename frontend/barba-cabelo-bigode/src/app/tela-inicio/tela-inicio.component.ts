@@ -3,11 +3,11 @@ import Barbeiro from '../models/Barbeiro.model';
 import Cliente from '../models/cliente.model';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: 'app-tela-inicio',
+  templateUrl: './tela-inicio.component.html',
+  styleUrls: ['./tela-inicio.component.css']
 })
-export class CadastroComponent implements OnInit {
+export class TelaInicioComponent implements OnInit {
 
   isBarbeiro = false;
 

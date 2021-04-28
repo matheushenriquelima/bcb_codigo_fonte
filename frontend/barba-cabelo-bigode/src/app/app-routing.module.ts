@@ -1,16 +1,13 @@
+import { TelaInicioComponent } from './tela-inicio/tela-inicio.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   {
-    path: 'cadastro',
-    loadChildren: () => import('./cadastro/cadastro.component').then( m => m.CadastroComponent)
-  },
-  {
     path: '',
     pathMatch: 'full',
-    component: CadastroComponent
+    // loadChildren: () => import('./tela-inicio/tela-inicio.module').then( m => m.TelaInicioModule)
+    component: TelaInicioComponent
   },
 ];
 
