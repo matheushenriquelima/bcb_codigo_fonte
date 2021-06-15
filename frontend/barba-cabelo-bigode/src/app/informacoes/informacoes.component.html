@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-row class="ion-justify-content-around">
+    <h2>Suas Informações</h2>
+    <img class="ion-margin-bottom" src="../../assets/logo.png" alt="">
+  </ion-row>
+
+</ion-header>
+
+<ion-content>
+  <ion-col class="ion-align-self-center">
+
+    <ion-item>
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-col>
+</ion-content>
+
+<ion-footer>
+
+  <ion-col class=" ion-align-self-end">
+
+    <ion-row class=" ion-justify-content-center">
+
+      <ion-button class="" id="botao-logar" expand="block">Editar informações</ion-button>
+    </ion-row>
+  </ion-col>
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="Reservas">
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="Listar">
+      <ion-icon name="list-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="Editar">
+      <ion-icon name="pencil-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>
