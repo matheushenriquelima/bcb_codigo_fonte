@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { InformacoesComponent } from './informacoes/informacoes.component';
 import { SuasReservasComponent } from './suas-reservas/suas-reservas.component';
+import { CriarReservaComponent } from './criar-reserva/criar-reserva.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,13 @@ const routes: Routes = [
   {
     path: 'suas-reservas',
     component: SuasReservasComponent
+
+  },
+  {
+    path: 'reserva/criar',
+    component: CriarReservaComponent
   }
+
 ];
 
 @NgModule({

@@ -1,27 +1,29 @@
-import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { InformacoesComponent } from './informacoes/informacoes.component';
+import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { BarbeirosPertoComponent } from './barbeiros-perto/barbeiros-perto.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { CriarReservaComponent } from './criar-reserva/criar-reserva.component';
+import { InformacoesComponent } from './informacoes/informacoes.component';
+import { LoginComponent } from './login/login.component';
 import { SuasReservasComponent } from './suas-reservas/suas-reservas.component';
 
+
+
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     CadastroComponent,
     InformacoesComponent,
     BarbeirosPertoComponent,
     LoginComponent,
-    SuasReservasComponent
+    SuasReservasComponent,
+    CriarReservaComponent
    ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
