@@ -11,6 +11,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CriarReservaComponent } from './criar-reserva/criar-reserva.component';
 import { InformacoesComponent } from './informacoes/informacoes.component';
 import { LoginComponent } from './login/login.component';
+import { ModalConfirmComponent } from './modal-confirm/modal-confirm.component';
 import { SuasReservasComponent } from './suas-reservas/suas-reservas.component';
 
 
@@ -23,7 +24,8 @@ import { SuasReservasComponent } from './suas-reservas/suas-reservas.component';
     BarbeirosPertoComponent,
     LoginComponent,
     SuasReservasComponent,
-    CriarReservaComponent
+    CriarReservaComponent,
+    ModalConfirmComponent
    ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],

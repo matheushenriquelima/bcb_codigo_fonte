@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-row class="ion-justify-content-around">
+    <h2>Suas Reservas</h2>
+    <img class="ion-margin-bottom" src="../../assets/logo.png" alt="">
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <ion-col class="ion-align-self-center">
+    <ion-card>
+      <ion-card-content>
+        <ion-row class="ion-justify-content-around">
+          <h2>{{dataEHorario}}</h2>
+        </ion-row>
+ 
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-row class="ion-justify-content-around">
+          <h2>{{LocalAtendimento}}</h2>
+        </ion-row>
+      </ion-card-content>
+
+    </ion-card>
+  </ion-col>
+</ion-content>
+
+<ion-footer>
+  <ion-row class=" ion-justify-content-center">
+
+    <ion-button class="" id="botao-logar" (click)="onClick()" expand="block">Confirmar</ion-button>
+  </ion-row>
+</ion-footer>

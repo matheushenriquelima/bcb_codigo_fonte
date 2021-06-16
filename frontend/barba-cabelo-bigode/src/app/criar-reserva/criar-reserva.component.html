@@ -1,10 +1,12 @@
 <ion-header>
-  <div class="center-content">
-    <img src="../../assets/logo.png" alt="">
-  </div>
-  <div class="ion-text-center">
-    <h2>Faça sua Reserva</h2>
-  </div>
+  <ion-navbar>
+    <div class="center-content">
+      <img src="../../assets/logo.png" alt="">
+    </div>
+    <div class="ion-text-center">
+      <h2>Faça sua Reserva</h2>
+    </div>
+  </ion-navbar>
 </ion-header>
 <ion-content>
   <div>
@@ -16,10 +18,22 @@
       <ion-label>Data</ion-label>
       <ion-datetime displayFormat="DD/MM/YYYY" min="2021-03-14" max="2022-12-09" value="2021-03-23T15:03:46.789"></ion-datetime>
     </ion-item>
+
+    <ion-row justify-content-center>
+            <ion-col col-12 *ngFor="let item of barbeiro.horarios">
+        <ion-chip>
+          <ion-button size="medium">{{item}}</ion-button>
+        </ion-chip>      
+      </ion-col>
+    </ion-row>
+    
   </div>
 
 </ion-content>
 
 <ion-footer>
+  <ion-row class=" ion-justify-content-center">
 
+    <ion-button class="" id="botao-logar" (click)="presentModal()" expand="block">Proximo passo</ion-button>
+  </ion-row>
 </ion-footer>
