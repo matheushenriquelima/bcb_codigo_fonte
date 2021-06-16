@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-row class="ion-justify-content-around">
+    <h2>Barbeiros na area</h2>
+    <img class="ion-margin-bottom" src="../../assets/logo.png" alt="">
+  </ion-row>
+
+</ion-header>
+
+<ion-content>
+  <ion-col class="ion-align-self-center">
+    <ion-card  *ngFor="let item of barbeiros" >    
+      <ion-card-content>
+        <ion-row class="ion-justify-content-around">
+          <h1>{{item.nome}}</h1>
+        </ion-row>      
+        <ion-row class="ion-justify-content-around">
+          <h3>{{item.localizacao}}</h3>
+          <h2>{{item.distancia}}</h2>
+        </ion-row>     
+      </ion-card-content>
+    
+    </ion-card>
+  </ion-col>
+</ion-content>
+
+<ion-footer>
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="Reservas">
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="Listar">
+      <ion-icon name="list-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="Editar">
+      <ion-icon name="pencil-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>

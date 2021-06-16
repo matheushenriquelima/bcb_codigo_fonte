@@ -1,14 +1,15 @@
+import { BarbeirosPertoComponent } from './barbeiros-perto/barbeiros-perto.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { InformacoesComponent } from './informacoes/informacoes.component';
+import { SuasReservasComponent } from './suas-reservas/suas-reservas.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    // loadChildren: () => import('./tela-inicio/tela-inicio.module').then( m => m.TelaInicioModule)
     component: LoginComponent
   },
   {
@@ -18,6 +19,14 @@ const routes: Routes = [
   {
     path: 'editar',
     component: InformacoesComponent
+  },
+  {
+    path: 'barbeiros-perto',
+    component: BarbeirosPertoComponent
+  },
+  {
+    path: 'suas-reservas',
+    component: SuasReservasComponent
   }
 ];
 

@@ -11,13 +11,17 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BarbeirosPertoComponent } from './barbeiros-perto/barbeiros-perto.component';
+import { SuasReservasComponent } from './suas-reservas/suas-reservas.component';
 
 @NgModule({
   declarations: [	
     AppComponent,
     CadastroComponent,
     InformacoesComponent,
-    LoginComponent
+    BarbeirosPertoComponent,
+    LoginComponent,
+    SuasReservasComponent
    ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],

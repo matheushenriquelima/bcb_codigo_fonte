@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-informacoes',
@@ -9,7 +10,8 @@ export class InformacoesComponent implements OnInit {
 
   isBarbeiro = false;
 
-  constructor() { }
+  constructor(   private router: Router
+    ) { }
 
   ngOnInit() {
   }
@@ -18,6 +20,14 @@ export class InformacoesComponent implements OnInit {
     this.isBarbeiro = !this.isBarbeiro;
   }
   segmentChanged(ev: any) {
-    console.log('Segment changed', ev);
+    if(ev.detail.value = "Listar"){
+      this.router.navigate(['/barbeiros-perto']);
+    }
+    if(ev.detail.value = "Editar"){
+      this.router.navigate(['/editar']);
+    }
+    if(ev.detail.value = "Reservas"){
+      this.router.navigate(['/suas-reservas']);
+    }
   }
 }
